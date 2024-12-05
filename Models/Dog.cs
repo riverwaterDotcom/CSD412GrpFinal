@@ -13,7 +13,7 @@ namespace week4assignment.Models
         public float DogWeight { get; set; }
         public string DogSize { get; set; }
 
-        public Dog()
+        /* public Dog()
         {
             Random rand = new Random();
             this.Id = rand.Next(1, 10001);
@@ -29,6 +29,6 @@ namespace week4assignment.Models
             this.DogPattern = "default dog pattern is golden retriever";
             this.DogWeight = 50.0f;
             this.DogSize = "default dog size is medium";
-        }
+        } */
     }
 }
