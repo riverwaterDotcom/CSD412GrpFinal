@@ -14,7 +14,7 @@ namespace week4assignment.Models
         public string CatSize { get; set; }
 
         // commented out constructors because it wouldnt work with them in here
-        public Cat()
+        /* public Cat()
         {
             Random rand = new Random();
             this.Id = rand.Next(1, 10001);
@@ -30,6 +30,6 @@ namespace week4assignment.Models
             this.CatPattern = "default cat pattern is tabby";
             this.CatWeight = 10.0f;
             this.CatSize = "default cat size is medium";
-        }
+        } */
     }
 }
