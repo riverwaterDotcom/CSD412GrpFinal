@@ -13,6 +13,7 @@ namespace week4assignment.Models
         public float DogWeight { get; set; }
         public string DogSize { get; set; }
 
+        
         /* public Dog()
         {
             Random rand = new Random();
