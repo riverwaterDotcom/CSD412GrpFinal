@@ -8,12 +8,13 @@ namespace week4assignment.Models
     public class HouseholdPets
     {
         public int Id { get; set; }
+        public string HouseHoldName { get; set; }
         public IEnumerable<Cat> CatList { get; set; }
         public IEnumerable<Dog> DogList { get; set; }
         public int DogCount { get; set; }
         public int CatCount { get; set; }
 
-        public HouseholdPets()
+       /*  public HouseholdPets()
         {
             Random rand = new Random();
             this.Id = rand.Next(1, 10001);
@@ -29,7 +30,7 @@ namespace week4assignment.Models
             this.DogList = new List<Dog>();
             this.CatCount = 0;
             this.DogCount = 0;
-        }
+        } */
 
         public void addCat(Cat cat)
         {
