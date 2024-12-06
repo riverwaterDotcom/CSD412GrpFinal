@@ -1,71 +1,55 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+﻿/* Matrix rain background */
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+.matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Put the matrix background behind content */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for text */
+    color: #ffffff; /* White text for all other content */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+a {
+    color: #00ff00; /* Bright green links */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.3); /* Brighter rows for contrast */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Alternate rows a bit darker */
+}
+
+/* Reduce margin or padding for sections above "About the Application" */
+.statistics-section, .quick-links-section, .search-section {
+    margin-bottom: 10px; /* Adjust as necessary */
+}
+
+/* Ensure the 'about' section is properly spaced and visible */
+.about-section {
+    padding: 20px;
+    margin-top: 20px;
+    color: #00ff00;
+}
+
+table, th, td {
+    border: 1px solid #00ff00; /* Bright green borders for table */
+    color: #ffffff; /* White text inside the table */
+}
+
+h1, h2 {
+    color: #00ff00; /* Bright green headings */
 }
