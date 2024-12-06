@@ -13,6 +13,7 @@ namespace week4assignment.Controllers
     public class DogsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private string searchString;
 
         public DogsController(ApplicationDbContext context)
         {
@@ -22,6 +23,15 @@ namespace week4assignment.Controllers
         // GET: Dogs
         public async Task<IActionResult> Index()
         {
+            // Search Feature for dogs
+            var dogs = from c in _context.Dogs
+                       select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                dogs = dogs.Where(s => s.DogName.Contains(searchString));
+            }
+
             return View(await _context.Dogs.ToListAsync());
         }
 

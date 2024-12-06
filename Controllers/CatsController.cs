@@ -14,6 +14,7 @@ namespace week4assignment.Controllers
     public class CatsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private string searchString;
 
         public CatsController(ApplicationDbContext context)
         {
@@ -54,6 +55,15 @@ namespace week4assignment.Controllers
 
             HttpClient httpClient = new HttpClient();
             //  sorrstring clientReq = await httpClient.GetStringAsync("https://localhost:44379/api/CatsInfo");
+
+            // Search Feature for cats
+            var cats = from c in _context.Cats
+                       select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                cats = cats.Where(s => s.CatName.Contains(searchString));
+            }
 
             return View(await _context.Cats.ToListAsync());
         }
